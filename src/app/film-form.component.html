@@ -1,0 +1,28 @@
+
+<form class="form-group"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+
+  <input type="text" name="title" class="form-control" formControlName="title" placeholder="Film Name"><br />
+
+  <input type="number" name="language_id" class="form-control"  formControlName="language_id" placeholder="Language ID"><br />
+
+  <input type="number" name="rental_duration" class="form-control" formControlName="rental_duration" placeholder="Rental Duration" ><br />
+
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="number" name="rental_rate" class="form-control" formControlName="rental_rate" placeholder="Rental Rate">
+  </div><br />
+
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="number" name="replacement_cost" class="form-control" formControlName="replacement_cost" placeholder="Replacement Cost" >
+  </div><br />
+
+  <input type="number" name="release_year" class="form-control" formControlName="release_year" placeholder="Release Year" ><br />
+
+  <input type="text" name="description" class="form-control" formControlName="description" placeholder="Description" ><br />
+
+  <button class="btn btn-outline-info btn-block pointer" type="submit" >Save</button>
+
+</form>

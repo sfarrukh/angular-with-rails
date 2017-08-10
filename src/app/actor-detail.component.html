@@ -1,0 +1,31 @@
+
+  <h2 class="h3" *ngIf="actor">{{ actor.first_name }} {{ actor.last_name }}</h2>
+
+  <div class="input-group">
+    <input #term (keyup)="search(term.value)" type="text" class="form-control" placeholder="Search Film...">
+    <span class="input-group-btn">
+      <button class="btn btn-info pointer" type="button">Add</button>
+    </span>
+  </div><br />
+
+  <div class="list-group">
+    <li class="list-group-item list-group-item-action custom-list pointer"
+        *ngFor= "let item of items | async"
+        (click)="link(actor, item)">
+      {{ item.title }}
+    </li>
+  </div>
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+
+  <button class="btn btn-outline-info btn-block pointer" *ngIf="actor" (click)="showActorInFilms()">Show Movies</button>
+
+  <div class="list-group" >
+    <li class="list-group-item list-group-item-action custom-list pointer"
+      *ngFor="let film of films"
+      (click)="gotoFilm(film)">
+      <!--(click)="unlink(actor, film)-->
+      {{ film.title }}
+    </li>
+    
+  </div>

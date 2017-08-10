@@ -1,0 +1,32 @@
+
+  <h3 class="h3" *ngIf="film">{{ film.title }} </h3> 
+  <table class="table">
+    <tr>
+      <th>Description</th>
+      <td *ngIf="film">{{ film.description }}</td>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <td *ngIf="film">{{ film.release_year }}</td>
+    </tr>
+    <tr>
+      <th>Rental Rate</th>
+      <td *ngIf="film">$ {{ film.rental_rate }} </td>
+    </tr>
+    <tr>
+      <th>Features</th>
+      <td *ngIf="film">{{ film.special_features }} </td>
+    </tr>
+  </table>
+
+  <button class="btn btn-outline-info btn-block pointer" (click)="showActors()" >
+    Show Actors
+  </button>
+
+  <div class="list-group" >
+    <li class="list-group-item list-group-item-action custom-list pointer"
+      *ngFor="let actor of actors"
+      (click)="gotoActor(actor)">
+      {{ actor.first_name }} {{ actor.last_name }}
+    </li>
+  </div>

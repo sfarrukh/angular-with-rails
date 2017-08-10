@@ -1,0 +1,25 @@
+
+<button class="btn btn-outline-info btn-block pointer" routerLink="/actor-form">Add a new actor</button><br />
+
+<div class="input-group">
+  <input #term (keyup)="search(term.value)" type="text" class="form-control" placeholder="Search Actors...">
+</div><br />
+
+<div class="list-group">
+  <li class="list-group-item custom-list pointer"
+      *ngFor= "let actor of searched_actors | async"
+      (click)="gotoDetail(actor)">
+    {{ actor.first_name }} {{ actor.last_name }}
+  </li>
+</div>
+
+<!--<div class="list-group" >
+  <li class="list-group-item list-group-item-action custom-list pointer "
+      *ngFor= "let aktyor of bogicho" 
+      (click)="gotoDetail(aktyor)" >
+    {{ aktyor.first_name }} {{ aktyor.last_name }}
+  </li>
+</div>-->
+
+<p class="error" *ngIf="errorMessage">{{errorMessage}}</p>
+

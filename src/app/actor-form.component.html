@@ -1,0 +1,12 @@
+
+<form class="form-group"
+  [formGroup]="form"
+  (ngSubmit)="onSubmit(form.value)">
+
+  <input name="first_name" class="form-control input-col" type="text" formControlName="first_name" placeholder="First Name"><br />
+
+  <input name="last_name" class="form-control" type="text" formControlName="last_name" placeholder="Last Name"><br />
+
+  <button class="btn btn-outline-info btn-block pointer" type="submit" >Save</button>
+
+</form>
