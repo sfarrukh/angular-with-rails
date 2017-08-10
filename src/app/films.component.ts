@@ -62,4 +62,13 @@ export class FilmsComponent implements OnInit {
   //   this.searchedFilms = this.filmsService.search(term);
   // }
 
+  selectedLetter(letter: string){
+    this.filmsService.letter(letter)
+    // alert(letter)
+      .subscribe(
+        res => this.films = res,
+        error => this.errorMessage = <any>error
+      )
+  }
+
 }

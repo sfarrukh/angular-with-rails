@@ -84,4 +84,11 @@ export class FilmsService {
       .map(res => res.json() )
   }
 
+  letter(letter: string) {
+    let url = 'http://localhost:4200/api/search/films_letter?first_letter='
+    return this.http
+      .get(url + letter)
+      .map(res => res.json())
+  }
+
 }
