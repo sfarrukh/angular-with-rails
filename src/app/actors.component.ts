@@ -64,8 +64,13 @@ export class ActorsComponent implements OnInit {
     this.router.navigate(['/actor-detail', ok.actor_id])
   }
 
-  gotoActorForm(){
-    this.router.navigate(['/actor-form'])
+  selectedLetter(letter: string){
+    this.actorsService.letter(letter)
+    // alert(letter)
+      .subscribe(
+        res => this.bogicho = res,
+        error => this.errorMessage = <any>error
+      )
   }
 
   // search (term: string) {

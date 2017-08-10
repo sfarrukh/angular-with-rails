@@ -71,6 +71,13 @@ export class ActorsService {
         .map(res => res.json() )
     }
 
+    letter(letter: string) {
+      let url = 'http://localhost:4200/api/search/actors_letter?first_letter='
+      return this.http
+        .get(url + letter)
+        .map(res => res.json())
+    }
+
     link(actor_id: number, film_id: number){
       let url = 'http://localhost:4200/api/actors'
       return this.http

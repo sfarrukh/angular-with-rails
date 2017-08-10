@@ -43,7 +43,7 @@ export class FilmFormComponent implements OnInit {
     this.filmsService.createFilm(formData)
       .subscribe(babanji => {
         this.form = babanji;
-        this.router.navigate(['film-form'])
+        this.router.navigate(['films'])
       })
   }
 }
