@@ -1,28 +1,30 @@
-## Description
+## Prerequisite:
+This project is a frontend application and it depends on [rails-crud](https://github.com/sfarrukh/rails-crud) to run on its backend. I encourage you to install [rails-crud](https://github.com/sfarrukh/rails-crud) first.
 
-This project is dependent on [rails-crud](https://github.com/sfarrukh/rails-crud)to run on backend. 
+## Required Installations:
 
-## Required Installation
+* [Node.js and npm](https://nodejs.org/en/)
 
-1. [Node.js](https://nodejs.org/en/)
+## Project Configuration:
 
-## Code scaffolding
+1. Install Angular CLI in global environment:
+```
+npm install -g @angular/cli
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Clone 'Angular-with-rails' project:
+```
+git clone https://github.com/sfarrukh/angular-with-rails.git
+```
 
-## Build
+3. Install node_modules in 'Angular-with-rails' project folder:
+```
+cd 'Angular-with-rails'
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+4. Run Angular server to open Project in browser:
+(Assuming its backedend app [rails-crud](https://github.com/sfarrukh/rails-crud) is running on port 4200)
+```
+ng serve --open --port=3000
+```
